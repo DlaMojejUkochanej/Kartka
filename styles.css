@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("Tło/ogolneTlo.jpg");
+    background-size: 100%;
+    margin: 100px;
+  }
+  
+  .front-page {
+    padding: 0;
+    transform-origin: center;
+    animation: closeBook 1s ease-in-out forwards;
+  }
+
+  .tlo{
+    height: 400px;
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .zdjecia {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    max-width:500px
+  }
+  
+  
+  .card {
+    background-color: #cbc3e3;
+    padding: 2px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: none;
+    transform-origin: center;
+    animation: openBook 1s ease-in-out forwards;
+  }
+  
+  @keyframes openBook {
+    from {
+      transform: perspective(800px) rotateY(180deg);
+    }
+    to {
+      transform: perspective(800px) rotateY(0deg);
+    }
+  }
+
+  @keyframes closeBook {
+    from {
+      transform: perspective(800px) rotateY(180deg);
+    }
+    to {
+      transform: perspective(800px) rotateY(0);
+    }
+  }
+
+  
+  .mySlides {
+    max-width: 500px;
+    margin: 10px;
+  }
+  
